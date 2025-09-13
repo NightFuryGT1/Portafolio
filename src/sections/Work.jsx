@@ -1,9 +1,8 @@
 import { Box, Container, Typography, Grid, Card, CardContent, CardActionArea } from "@mui/material";
 
 const proyectos = [
-  { title: "Landing Minimal", desc: "UI limpia con MUI y Vite", link: "#" },
-  { title: "Dashboard Analytics", desc: "Grillas y charts", link: "#" },
-  { title: "eCommerce UI", desc: "Carrito, catálogo y filtros", link: "#" },
+  { title: "Desarrollo de Aplicaciones Web", desc: "UI limpia con MUI y Vite", link: "#" },
+  { title: "Desarrollo de Aplicaciones Movil", desc: "React Native", link: "#" },
 ];
 
 export default function Work() {

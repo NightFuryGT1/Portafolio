@@ -8,7 +8,6 @@ import Hero from "./sections/Hero";
 import About from "./sections/About";
 import Skills from "./sections/Skills";
 import Work from "./sections/Work";
-import Blog from "./sections/Blog";
 import Contact from "./sections/Contact";
 import Docs from "./pages/Docs";
 
@@ -20,7 +19,6 @@ function Home() {
       <Skills />
       <Work />
       <Contact />
-      <Blog />
     </>
   );
 }

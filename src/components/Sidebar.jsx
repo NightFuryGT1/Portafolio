@@ -10,7 +10,6 @@ const items = [
   { id: "habilidades", label: "Mis Skills", type: "anchor" },
   { id: "trabajo", label: "Trabajo", type: "anchor" },
   { id: "contacto", label: "Contacto", type: "anchor" },
-  { id: "blog", label: "Blog", type: "anchor", icon: <Article fontSize="small" /> },
   { to: "/docs", label: "Documentación", type: "route", icon: <Description fontSize="small" /> },
 ];
 
@@ -69,17 +68,17 @@ export default function Sidebar() {
 
       <Stack direction="row" spacing={1.2} sx={{ p: 2 }}>
         <Tooltip title="GitHub">
-          <IconButton size="small" color="primary" href="https://github.com/" target="_blank" rel="noreferrer">
+          <IconButton size="small" color="primary" href="https://github.com/NightFuryGT1" target="_blank" rel="noreferrer">
             <GitHub fontSize="small" />
           </IconButton>
         </Tooltip>
         <Tooltip title="LinkedIn">
-          <IconButton size="small" color="primary" href="https://linkedin.com/" target="_blank" rel="noreferrer">
+          <IconButton size="small" color="primary" href="www.linkedin.com/in/armando-sierra-8426b2267" target="_blank" rel="noreferrer">
             <LinkedIn fontSize="small" />
           </IconButton>
         </Tooltip>
         <Tooltip title="Email">
-          <IconButton size="small" color="primary" href="mailto:tu.correo@ejemplo.com">
+          <IconButton size="small" color="primary" href="armandosierrago24@gmail.com">
             <MailOutline fontSize="small" />
           </IconButton>
         </Tooltip>

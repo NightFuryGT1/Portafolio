@@ -34,7 +34,7 @@ export default function Hero() {
               </Typography>
 
               <Typography variant="body1" color="text.secondary">
-                Front End Developer / WordPress Expert
+                Front End Developer 
               </Typography>
 
               <Stack direction="row" spacing={2} sx={{ pt: 1 }}>
