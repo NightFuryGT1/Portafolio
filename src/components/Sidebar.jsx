@@ -1,5 +1,5 @@
 import { Drawer, Box, Typography, List, ListItemButton, ListItemText, Divider, Stack, IconButton, Tooltip } from "@mui/material";
-import { GitHub, LinkedIn, MailOutline, Article, Description } from "@mui/icons-material";
+import { GitHub, LinkedIn, MailOutline, Article, Description, Instagram } from "@mui/icons-material";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
 export const DRAWER_WIDTH = 220;
@@ -80,6 +80,11 @@ export default function Sidebar() {
         <Tooltip title="Email">
           <IconButton size="small" color="primary" href="armandosierrago24@gmail.com">
             <MailOutline fontSize="small" />
+          </IconButton>
+        </Tooltip>
+        <Tooltip title="Instagram">
+          <IconButton size="small" color="primary" href="https://www.instagram.com/armandosg01/">
+            <Instagram fontSize="small" />
           </IconButton>
         </Tooltip>
       </Stack>

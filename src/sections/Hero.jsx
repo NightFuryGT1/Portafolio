@@ -1,5 +1,6 @@
 // src/sections/Hero.jsx
 import { Box, Typography, Button, Stack, Container } from "@mui/material";
+import Cube3D from "../components/Cube3D";
 
 export default function Hero() {
   return (
@@ -56,60 +57,17 @@ export default function Hero() {
             </Stack>
           </Box>
 
-          {/* DERECHA: Imagen */}
-          <Box
-            sx={{
-              flex: { md: "0 0 480px" },   // ancho fijo agradable en md+
-              width: { xs: "100%", md: 440 },
-              ml: { md: "auto" },          // empuja hacia la derecha
-              display: { xs: "block", md: "block" },
-            }}
-          >
-            <Box
-              sx={{
-                position: "relative",
-                width: "100%",
-                aspectRatio: "4 / 6",
-                borderRadius: 4,
-                overflow: "hidden",
-                border: "1px solid",
-                borderColor: "divider",
-                boxShadow: "0 10px 30px rgba(0,0,0,.35)",
-                transition: "transform .3s ease, box-shadow .3s ease",
-                "&:hover": {
-                  transform: "translateY(-4px)",
-                  boxShadow: "0 16px 40px rgba(0,0,0,.45)",
-                },
-              }}
-            >
-              <Box
-                component="img"
-                src="/img/Armando.jpg"  // ¡ojo al nombre con mayúscula!
-                alt="Armando - Desarrollador web"
-                sx={{ width: "100%", height: "100%", objectFit: "cover", filter: "grayscale(10%)" }}
-              />
+                  {/* DERECHA: Cubo 3D (reemplaza la imagen) */}
+<Box
+  sx={{
+    flex: { md: "0 0 480px" },
+    width: { xs: "100%", md: 480 },
+    ml: { md: "auto" },
+  }}
+>
+  <Cube3D size={460} />
+</Box>
 
-              {/* Tarjeta decorativa */}
-              <Box
-                sx={{
-                  position: "absolute",
-                  bottom: 12,
-                  left: 12,
-                  bgcolor: "rgba(0,0,0,.55)",
-                  border: "1px solid",
-                  borderColor: "rgba(255,255,255,.08)",
-                  px: 1.2,
-                  py: 0.5,
-                  borderRadius: 2,
-                  backdropFilter: "blur(6px)",
-                  fontSize: 12,
-                  letterSpacing: 0.3,
-                }}
-              >
-                &lt;/&gt; React • MUI
-              </Box>
-            </Box>
-          </Box>
         </Stack>
       </Container>
     </Box>
