@@ -58,15 +58,16 @@ export default function Hero() {
           </Box>
 
                   {/* DERECHA: Cubo 3D (reemplaza la imagen) */}
-<Box
-  sx={{
-    flex: { md: "0 0 480px" },
-    width: { xs: "100%", md: 480 },
-    ml: { md: "auto" },
-  }}
->
-  <Cube3D size={460} />
-</Box>
+        <Box
+          sx={{
+            flex: { md: "0 0 480px" },
+            width: { xs: "100%", md: 480 },
+            ml: { md: "auto" },
+            display: { xs: "none", md: "block" }
+          }}
+        >
+              <Cube3D size={460} />
+          </Box>
 
         </Stack>
       </Container>

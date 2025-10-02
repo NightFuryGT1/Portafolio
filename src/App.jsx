@@ -1,6 +1,8 @@
 // src/App.jsx
-import { Box } from "@mui/material";
+import { Box, useMediaQuery } from "@mui/material";
+import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
+import TopBar from "./components/TopBar";
 import Sidebar, { DRAWER_WIDTH } from "./components/Sidebar";
 import VerticalTag from "./components/VerticalTag";
 
@@ -24,15 +26,24 @@ function Home() {
 }
 
 export default function App() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const mdUp = useMediaQuery("(min-width:900px)");
+
   return (
     <Box sx={{ display: "flex" }}>
-      <Sidebar />
+      {/* AppBar */}
+      <TopBar onOpenMenu={() => setMobileOpen(true)} />
 
+      {/* Sidebar responsive */}
+      <Sidebar mobileOpen={mobileOpen} onClose={() => setMobileOpen(false)} />
+
+      {/* Contenido principal */}
       <Box
         component="main"
         sx={{
-          ml: `${DRAWER_WIDTH}px`,
-          width: { xs: "100%", md: `calc(100% - ${DRAWER_WIDTH}px)` },
+          width: "100%",
+          ml: { md: `${DRAWER_WIDTH}px` },    // deja espacio al drawer en md+
+          pt: { xs: "64px", sm: "64px" },     // altura del AppBar
         }}
       >
         <Routes>
@@ -41,8 +52,11 @@ export default function App() {
         </Routes>
       </Box>
 
-      <VerticalTag side="left" text="< scroll down >" />
-      <VerticalTag side="right" text="< work done >" />
+      {/* Etiquetas decorativas: ocúltalas en móvil para no tapar contenido */}
+      <Box sx={{ display: { xs: "none", lg: "block" } }}>
+        <VerticalTag side="left" text="< scroll down >" />
+        <VerticalTag side="right" text="< work done >" />
+      </Box>
     </Box>
   );
 }
