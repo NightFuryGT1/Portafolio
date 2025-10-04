@@ -7,14 +7,18 @@ export default function TopBar({ onOpenMenu }) {
     <AppBar
       position="fixed"
       elevation={0}
-      sx={{ bgcolor: "background.paper", borderBottom: "1px solid", borderColor: "divider" }}
+      sx={{
+        bgcolor: "background.paper",
+        borderBottom: "1px solid",
+        borderColor: "divider",
+        display: { xs: "block", md: "none" }, // ← oculto en md+
+      }}
     >
       <Toolbar sx={{ gap: 1 }}>
         <IconButton
           color="inherit"
           edge="start"
           onClick={onOpenMenu}
-          sx={{ display: { xs: "inline-flex", md: "none" } }}
           aria-label="Abrir menú"
         >
           <MenuIcon />
@@ -27,8 +31,10 @@ export default function TopBar({ onOpenMenu }) {
         <Button
           size="small"
           variant="outlined"
-          onClick={() => document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" })}
-          sx={{ display: { xs: "none", sm: "inline-flex" } }}
+          onClick={() =>
+            document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" })
+          }
+          sx={{ display: { xs: "inline-flex", sm: "inline-flex" } }}
         >
           Contactar
         </Button>
