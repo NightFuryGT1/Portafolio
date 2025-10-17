@@ -36,7 +36,7 @@ export default function About() {
               </Typography>
 
               <Typography color="text.secondary">
-                Estudiante de Ingeniería en Sistemas (9° semestre) con base sólida en
+                Estudiante de Ingeniería en Sistemas (10° semestre) con base sólida en
                 desarrollo web y backend. Me encanta construir interfaces limpias con
                 React + Material UI y crear APIs con Node/NestJS o Java/Spring Boot.
               </Typography>
@@ -104,7 +104,7 @@ export default function About() {
                 <AccordionDetails>
                   <Typography sx={{ mb: 1 }}>
                     <strong>Universidad Mariano Gálvez</strong><br />
-                    Ingeniería en Sistemas — 9° semestre
+                    Ingeniería en Sistemas — 10° semestre
                   </Typography>
                   <Typography>
                     <strong>CTS</strong><br />
